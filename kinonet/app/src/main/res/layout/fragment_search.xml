@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/back_style_edittext"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/abosh"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.4"
+            app:srcCompat="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_view_field"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:background="@null"
+            android:fontFamily="@font/sailec_regular"
+            android:hint="Найти фильмы"
+            android:paddingLeft="10dp"
+            android:textColor="#3B3B3B"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/section"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:orientation="vertical" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/loadserch"
+        android:src="@drawable/loadanim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

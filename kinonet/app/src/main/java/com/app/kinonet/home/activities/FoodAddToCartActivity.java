@@ -1,0 +1,29 @@
+package com.app.kinonet.home.activities;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.app.kinonet.R;
+
+public class FoodAddToCartActivity extends AppCompatActivity {
+
+    ImageView imgBack;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_food_add_to_cart);
+
+        imgBack = findViewById(R.id.img_back);
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+}
